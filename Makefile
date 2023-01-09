@@ -13,5 +13,5 @@ publish:
 brain-games:
 	poetry run brain-games
 
-make lint:
+lint:
 	poetry run flake8 brain_games
