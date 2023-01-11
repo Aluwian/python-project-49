@@ -12,8 +12,8 @@ def brain_gcd():
     while i < 3:
         num1 = random.randint(1, 100)
         num2 = random.randint(1, 100)
-        result = gcd(num1, num2)
         print(f'Question:{num1}, {num2}')
+        result = gcd(num1, num2)
         answer = prompt.string('Your answer: ')
         if int(answer) == result:
             print('Correct!')
