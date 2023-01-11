@@ -1,15 +1,8 @@
 #!/usr/bin/env python3
 
-
+from brain_games import cli
 import prompt
 import random
-
-
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    if name != " ":
-        print(f'Hello, {name}!')
 
 
 def brain_even():
@@ -18,28 +11,28 @@ def brain_even():
         number = random.randint(1, 100)
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
-        inc = f"'{answer}' is wrong answer ;(."
-        end = f"Let's try again, {name}!"
         if number % 2 == 0:
             if answer == 'yes':
                 print('Correct!')
             else:
-                print(f"{inc} Correct answer was 'yes'. \n{end}")
+                print(f''''{answer}' is wrong answer ;(. Correct answer was 'yes'.
+Let's try again, {cli.name}!''')
                 quit()
         if number % 2 != 0:
             if answer == 'no':
                 print('Correct!')
             else:
-                print(f"{inc} Correct answer was 'no'. \n{end}")
+                print(f''''{answer}' is wrong answer ;(. Correct answer was 'no'.
+Let's try again, {cli.name}!''')
                 quit()
         i += 1
-    print(f'Congratulations, {name}!')
+    print(f'Congratulations, {cli.name}!')
     quit()
 
 
 def main():
     print('Welcome to the Brain Games!')
-    welcome_user()
+    cli.welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     brain_even()
 
