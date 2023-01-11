@@ -8,23 +8,19 @@ import random
 def brain_even():
     i = 0
     while i < 3:
-        number = random.randint(1, 100)
-        print(f'Question: {number}')
+        num = random.randint(1, 100)
+        print(f'Question: {num}')
         answer = prompt.string('Your answer: ')
-        if number % 2 == 0:
-            if answer == 'yes':
-                print('Correct!')
-            else:
-                print(f''''{answer}' is wrong answer ;(. Correct answer was 'yes'.
+        if num % 2 == 0 and answer == 'yes' or num % 2 != 0 and answer == 'no':
+            print('Correct!')
+        elif num % 2 == 0 and answer == 'no':
+            print(f''''{answer}' is wrong answer ;(. Correct answer was 'yes'.
 Let's try again, {cli.name}!''')
-                quit()
-        if number % 2 != 0:
-            if answer == 'no':
-                print('Correct!')
-            else:
-                print(f''''{answer}' is wrong answer ;(. Correct answer was 'no'.
+            quit()
+        else:
+            print(f''''{answer}' is wrong answer ;(. Correct answer was 'no'.
 Let's try again, {cli.name}!''')
-                quit()
+            quit()
         i += 1
     print(f'Congratulations, {cli.name}!')
     quit()
