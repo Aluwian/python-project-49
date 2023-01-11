@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 
-from brain_games import cli
-import prompt
 import random
+import prompt
+from brain_games import cli
 
 
 def brain_calc():
