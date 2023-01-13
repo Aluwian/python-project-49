@@ -1,36 +1,12 @@
 #!/usr/bin/env python3
 
-from brain_games import cli
-import prompt
-import random
 
-
-def brain_even():
-    i = 0
-    while i < 3:
-        num = random.randint(1, 100)
-        print(f'Question: {num}')
-        answer = prompt.string('Your answer: ')
-        if num % 2 == 0 and answer == 'yes' or num % 2 != 0 and answer == 'no':
-            print('Correct!')
-        elif num % 2 == 0 and answer == 'no':
-            print(f''''{answer}' is wrong answer ;(. Correct answer was 'yes'.
-Let's try again, {cli.name}!''')
-            quit()
-        else:
-            print(f''''{answer}' is wrong answer ;(. Correct answer was 'no'.
-Let's try again, {cli.name}!''')
-            quit()
-        i += 1
-    print(f'Congratulations, {cli.name}!')
-    quit()
+from brain_games.game_engine import game_engine
+from brain_games.games.brain_even import game_run, game_task
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    cli.welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    brain_even()
+    game_engine(game_task, game_run)
 
 
 if __name__ == '__main__':
