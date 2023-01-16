@@ -7,3 +7,4 @@
 2. Brain-calc - https://asciinema.org/a/acaZsRvTCA1w0iqSW91Sjw6l7
 3. Brain-gcd - https://asciinema.org/a/UuKKGkQYTjNTHfL73TLHK9dCA
 4. Brain-progression - https://asciinema.org/a/mjXOoepoOUu8TOVMd8nWAcsPo
+5. Brain-progression - https://asciinema.org/a/yTipHtd6UBuKpsHce0hfGVLbQ
