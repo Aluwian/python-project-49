@@ -23,8 +23,9 @@ def game_engine(game_task, game_run):
         if answer == result:
             print('Correct!')
         else:
-            print(f''''{answer}' is wrong answer ;(. Correct answer was '{result}'
-Let's try again, {name}!''')
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{result}'"
+                  f"\nLet's try again, {name}!")
             quit()
         i += 1
     print(f'Congratulations, {name}!')
