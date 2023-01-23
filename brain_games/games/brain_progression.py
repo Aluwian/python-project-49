@@ -4,7 +4,7 @@ import random
 game_task = 'What number is missing in the progression?'
 
 
-def progression():
+def make_progression():
     items = []
     start = random.randint(0, 100)
     step = random.randint(1, 10)
@@ -16,10 +16,14 @@ def progression():
     return items
 
 
-def game_run():
-    progression_full = progression()
+def make_question():
+    list_progression = make_progression()
     symbol = random.randint(0, 9)
-    result = progression_full[symbol]
-    progression_full[symbol] = '..'
-    print('Question: ' + " ".join(map(str, progression_full)))
-    return str(result)
+    lost_number = list_progression[symbol]
+    list_progression[symbol] = '..'
+    result = " ".join((map(str, list_progression)))
+    return (result, lost_number)
+
+
+def get_result(question):
+    return str(question)

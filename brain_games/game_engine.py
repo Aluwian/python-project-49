@@ -1,25 +1,29 @@
 import prompt
 
 
-def greating():
+CYCLE_COUNT = 3
+
+
+def greet():
     print('Welcome to the Brain Games!')
 
 
 def welcome_user():
-    global name
     name = prompt.string('May I have your name? ')
-    if name != " ":
-        print(f'Hello, {name}!')
+    print(f'Hello, {name}!')
+    return name
 
 
-def game_engine(game_task, game_run):
-    greating()
-    welcome_user()
+def game_engine(game_task, make_question, get_result):
+    greet()
+    name = welcome_user()
     print(game_task)
     i = 0
-    while i < 3:
-        result = game_run()
+    while i < CYCLE_COUNT:
+        (question, second_value) = make_question()
+        print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
+        result = get_result(second_value)
         if answer == result:
             print('Correct!')
         else:
