@@ -13,6 +13,6 @@ def is_prime(number):
 
 
 def make_prime():
-    number_prime = random.randint(1, 100)
+    number_prime = random.randint(2, 100)
     result_prime = get_yes_no(is_prime(number_prime))
     return number_prime, result_prime
