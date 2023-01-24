@@ -10,5 +10,5 @@ def is_even(number):
 
 def make_even():
     number_even = random.randint(1, 100)
-    result_even = 'yes' if is_even(number_even) is True else 'no'
+    result_even = 'yes' if is_even(number_even) else 'no'
     return number_even, result_even

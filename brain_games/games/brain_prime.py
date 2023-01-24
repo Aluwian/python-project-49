@@ -13,5 +13,5 @@ def is_prime(number):
 
 def make_prime():
     number_prime = random.randint(1, 100)
-    result_prime = 'yes' if is_prime(number_prime) is True else 'no'
+    result_prime = 'yes' if is_prime(number_prime) else 'no'
     return number_prime, result_prime
