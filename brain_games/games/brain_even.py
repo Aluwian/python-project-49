@@ -1,12 +1,14 @@
 import random
-from brain_games.utils import get_yes_no
-
 
 game_task = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(number):
     return number % 2 == 0
+
+
+def get_yes_no(value):
+    return 'yes' if value else 'no'
 
 
 def make_even():
