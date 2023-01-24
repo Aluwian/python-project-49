@@ -11,7 +11,11 @@ def get_yes_no(value):
     return 'yes' if value else 'no'
 
 
+def make_number_result(func):
+    number = random.randint(1, 100)
+    result = get_yes_no(func(number))
+    return number, result
+
+
 def make_even():
-    number_even = random.randint(1, 100)
-    result_even = get_yes_no(is_even(number_even))
-    return number_even, result_even
+    return make_number_result(is_even)

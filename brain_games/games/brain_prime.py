@@ -1,18 +1,18 @@
-import random
-from brain_games.games.brain_even import get_yes_no
+from brain_games.games.brain_even import make_number_result
 
 
 game_task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number):
-    for i in range(2, number):
-        if number % i == 0:
-            return False
-    return True
+    if number < 2:
+        return False
+    else:
+        for i in range(2, number):
+            if number % i == 0:
+                return False
+        return True
 
 
 def make_prime():
-    number_prime = random.randint(2, 100)
-    result_prime = get_yes_no(is_prime(number_prime))
-    return number_prime, result_prime
+    return make_number_result(is_prime)
