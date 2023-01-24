@@ -19,11 +19,7 @@ def make_progression():
 def make_question():
     list_progression = make_progression()
     symbol = random.randint(0, 9)
-    lost_number = list_progression[symbol]
+    lost_number = str(list_progression[symbol])
     list_progression[symbol] = '..'
-    result = " ".join((map(str, list_progression)))
-    return (result, lost_number)
-
-
-def get_result(question):
-    return str(question)
+    question = " ".join((map(str, list_progression)))
+    return question, lost_number

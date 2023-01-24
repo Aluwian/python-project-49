@@ -2,11 +2,11 @@
 
 
 from brain_games.game_engine import game_engine
-from brain_games.games.brain_even import get_result, make_question, game_task
+from brain_games.games.brain_even import make_even, game_task
 
 
 def main():
-    game_engine(game_task, make_question, get_result)
+    game_engine(game_task, make_even)
 
 
 if __name__ == '__main__':

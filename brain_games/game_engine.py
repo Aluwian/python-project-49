@@ -14,16 +14,15 @@ def welcome_user():
     return name
 
 
-def game_engine(game_task, make_question, get_result):
+def game_engine(game_task, make_question):
     greet()
     name = welcome_user()
     print(game_task)
     i = 0
     while i < CYCLE_COUNT:
-        (question, second_value) = make_question()
+        (question, result) = make_question()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
-        result = get_result(second_value)
         if answer == result:
             print('Correct!')
         else:
