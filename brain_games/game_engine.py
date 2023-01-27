@@ -14,7 +14,7 @@ def welcome_user():
     return name
 
 
-def game_engine(game_task, make_question):
+def run_engine(game_task, make_question):
     greet()
     name = welcome_user()
     print(game_task)

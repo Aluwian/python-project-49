@@ -16,7 +16,7 @@ def make_progression():
     return items
 
 
-def make_question():
+def run_game():
     list_progression = make_progression()
     symbol = random.randint(0, 9)
     lost_number = str(list_progression[symbol])
